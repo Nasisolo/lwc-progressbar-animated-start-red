@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/nasisolo.lwc-progressbar-animated-fork-l95buzls",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve xrFzN6aXyrBZJTiQKG0T --open"
+  }
+}

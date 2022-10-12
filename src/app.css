@@ -1,0 +1,175 @@
+:host {
+  --start-width: 0%;
+  --start-color: #FF6347;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  display: flex;
+  height: 100vh;
+}
+
+.percentage-counter {
+  float: right;
+}
+
+.title {
+  padding-left: 5px;
+  font-size: 1.8em;
+}
+
+.progress {
+  background: rgba(255,255,255,0.3);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 100%;
+}
+
+.progress-value {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  height: 30px;
+  width: 0;
+}
+
+/* PBar 1 */
+.progress-title-1 {
+  animation: title-1 var(--millis-animation) normal forwards;
+}
+.percentage-counter-1 {
+  
+}
+.progress-status-1 {
+  animation: load-1 var(--millis-animation) normal forwards;
+  background: var(--bar-color-1);
+}
+
+/* PBar 2 */
+.progress-title-2 {
+  animation: title-2 var(--millis-animation) normal forwards;
+}
+.percentage-counter-2 {
+  
+}
+.progress-status-2 {
+  animation: load-2 var(--millis-animation) normal forwards;
+  background: var(--bar-color-2);
+}
+
+/* PBar 3 */
+.progress-title-3 {
+  animation: title-3 var(--millis-animation) normal forwards;
+}
+.percentage-counter-3 {
+  
+}
+.progress-status-3 {
+  animation: load-3 var(--millis-animation) normal forwards;
+  background: var(--bar-color-3);
+}
+
+/* PBar loadings animations */
+@keyframes load-1 {
+  0% {
+    width: var(--start-width);
+    background: var(--start-color);
+  }
+  80% {
+    background: var(--start-color);
+    box-shadow: 0 0 35px var(--start-color);
+  }
+  100% {
+    width: var(--end-width-1);
+    box-shadow: 0 0 40px var(--bar-color-1);
+  }
+}
+
+@keyframes load-2 {
+  0% {
+    width: var(--start-width);
+    background: var(--start-color);
+  }
+  80% {
+    background: var(--start-color);
+    box-shadow: 0 0 35px var(--start-color);
+  }
+  100% {
+    width: var(--end-width-2);
+    box-shadow: 0 0 40px var(--bar-color-2);
+  }
+}
+
+@keyframes load-3 {
+  0% {
+    width: var(--start-width);
+    background: var(--start-color);
+  }
+  80% {
+    background: var(--start-color);
+    box-shadow: 0 0 35px var(--start-color);
+  }
+  100% {
+    width: var(--end-width-3);
+    box-shadow: 0 0 40px var(--bar-color-3);
+  }
+}
+
+/* PBar titles animations */
+
+@keyframes title-1 {
+  0% {
+    opacity: 0.2;
+    color: var(--start-color);
+    text-shadow: 0 0 0 var(--start-color);
+  }
+  80% {
+    color: var(--start-color);
+    text-shadow: 0 0 8px var(--start-color);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--bar-color-1);
+    color: var(--bar-color-1);
+  }
+}
+
+@keyframes title-2 {
+  0% {
+    opacity: 0.2;
+    color: var(--start-color);
+    text-shadow: 0 0 0 var(--bar-color-2);
+  }
+  80% {
+    color: var(--start-color);
+    text-shadow: 0 0 8px var(--start-color);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--bar-color-2);
+    color: var(--bar-color-2);
+  }
+}
+
+@keyframes title-3 {
+  0% {
+    opacity: 0.2;
+    color: var(--start-color);
+    text-shadow: 0 0 0 var(--start-color);
+  }
+  80% {
+    color: var(--start-color);
+    text-shadow: 0 0 8px var(--start-color);
+  } 
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--bar-color-3);
+    color: var(--bar-color-3);
+  }
+}
